@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import { Circles } from "react-loader-spinner";
-import ProductTile from './Users/vishwanath/Documents/shopping cart/shopping cart/src/component.jsx/products/index.jsx' 
+import ProductTile from "../component.jsx/products";
 export default function Home(){
      const [product,setproduct]=useState()
      const [loading,setloading]=useState(false)
@@ -32,7 +32,7 @@ useEffect(()=>{
             />
         </div> : <div>
             {
-                product&&product.product? 
+                product&&product.length? 
                 product.map((productitem)=> <ProductTile product={productitem}/>):null
             }
 
