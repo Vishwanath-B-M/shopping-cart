@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import { Circles } from "react-loader-spinner";
-import ProductTile from "../component.jsx/products";
+import ProductTile from "../component/products";
 export default function Home(){
      const [product,setproduct]=useState()
      const [loading,setloading]=useState(false)
