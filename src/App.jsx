@@ -1,8 +1,8 @@
 
 import {Route,Routes} from 'react-router-dom'
-import Home from './pages.jsx/home.jsx'
-import Cart from './pages.jsx/cart.jsx'
-import Header from './component.jsx/header.jsx'
+import Home from './pages/home'
+import Cart from './pages/cart'
+import Header from './component/header'
 
 import './App.css'
 
