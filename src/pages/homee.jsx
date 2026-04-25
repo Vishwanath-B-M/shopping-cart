@@ -8,7 +8,7 @@ export default function Home(){
 
   async function FetchProduct(){
     setloading(true)
-    const res=await fetch('https://dummyjson.com/products')
+    const res=await fetch(`https://dummyjson.com/products?limit=100`)
     const data= await res.json()
     if(data){
         setloading(false)
@@ -20,11 +20,11 @@ useEffect(()=>{
 },[])
 
 
-const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.toLowerCase()))
+//const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.toLowerCase()))
 
 
     return(<>
-    <div className=" min-h-full bg-gradient-to-r from-blue-300 to-purple-300">{
+    <div className="bg-gradient-to-r from-blue-300 to-purple-300">{
         loading ? <div className="min-h-screen w-full flex justify-center items-center">
             <Circles
             height={'120'}
@@ -34,18 +34,15 @@ const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.t
             />
         </div> : <div>
             <div>
-                <input type="text" placeholder="search" className="w-2/4 h-10 border-2 ml-4 text-3xl mr-20 rounded hover:text-4xl hover:w-3/4" value={search} onChange={(e)=>setsearch(e.target.value)}/>
+                <input type="text" placeholder="search" className="w-2/4 h-10 border-2 ml-4 text-3xl mr-20 rounded hover:text-4xl" value={search} onChange={(e)=>setsearch(e.target.value)}/>
             </div>
 
 
             <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 max-w-6*l mx-auto p-3">
-           {searchs?
-            (searchs.map((item)=><ProductTile key={item.id} product={item}/>))
+           
+            {product.map((item)=><ProductTile key={item.id} product={item}/>)}
           
-            :
-            (product&&product.length? 
-            product.map((productitem)=> <ProductTile key={productitem.id} product={productitem}/>):null)    
-            }
+            
             
             </div>
 

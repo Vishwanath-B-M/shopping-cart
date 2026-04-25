@@ -17,14 +17,18 @@ export default function Header(){
         </Link>
 
         <ul className="text-4xl text-black flex flex-cols items-end gap-4 mr-10"> 
-            <Link to={"/"}>
+           
+        <Link to={"/"}>
             <li key={1} className="hover:text-5xl"> Home </li>
             </Link>
+            <Link to={"/category"}>
+            <li key={2} className="hover:text-5xl"> Category </li>
+            </Link>
             <Link to={"/cart"}>
-            <li key={2} className="hover:text-5xl"> Cart </li>
+            <li key={3} className="hover:text-5xl"> Cart </li>
             </Link>
             <Link to={'/login'}>
-            <li key={3} className="hover:text-5xl">Login </li>
+            <li key={4} className="hover:text-5xl">Login </li>
             </Link>
         </ul>
         </nav>
