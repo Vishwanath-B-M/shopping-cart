@@ -22,7 +22,7 @@ useEffect(()=>{
 
 
     return(<>
-    <div>{
+    <div className="bg-gradient-to-r from-blue-300 to-purple-300">{
         loading ? <div className="min-h-screen w-full flex justify-center items-center">
             <Circles
             height={'120'}
@@ -31,6 +31,9 @@ useEffect(()=>{
             visible={true}
             />
         </div> : <div>
+            <div>
+                <input type="text" placeholder="search" className="w-3/4 h-10 border-2 ml-4 text-3xl mr-20 rounded"/>
+            </div>
 
 
             <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 max-w-6*l mx-auto p-3">

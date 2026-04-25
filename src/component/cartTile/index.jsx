@@ -17,7 +17,7 @@ function RemoveHandle(){
 
 
         <div>
-        <button  onClick={ RemoveHandle } className="w-40 h-20 bg-green-700 rounded flex flex-col items-center justify-center text-white">
+        <button  onClick={ RemoveHandle } className="w-72 h-25 gap-4 text-black text-4xl bg-white/40  border-4 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-5xl m-4">
               "remove from the cart" 
           </button>
         </div>

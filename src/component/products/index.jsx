@@ -24,10 +24,10 @@ const cart=useSelector(state=>state.cart)
 
     return(<>
     <div className='flex flex-col items-center border-2 border-red-900 mt-4 gap-4 rounded-xl'>
-        <img src={product.image} alt={product.title} className='object-cover h-full w-full'/>
+        <img src={product.image} alt={product.title} className='object-cover h-full w-full text-2xl'/>
         <h1 className='w-40 truncate text-grey-700 font-bold'> {product.title}</h1>
-        <div className='flex item-center justify-center w-full mb-3'>
-          <button  onClick={() => isitem ? RemoveHandle() : HandleAddtoCart()} className="bg-green-700 rounded p-6 font-bold border-2 text-2xl">
+        <div className='flex item-center justify-center w-full'>
+          <button  onClick={() => isitem ? RemoveHandle() : HandleAddtoCart()} className="w-72 h-25 gap-4 text-black text-4xl bg-white/40  border-4 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-5xl">
              { isitem ? "remove from the cart":"add to cart" }
           </button>
         </div>
