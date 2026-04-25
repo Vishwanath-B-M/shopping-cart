@@ -10,9 +10,9 @@ function RemoveHandle(){
     return(<>
     <div>  <div className='min-h-[40vh] flex flex-col items-center justify-center'>
         
-        <img src={cartitem.image}/>
-        <p><span>  {cartitem.title}</span></p><br></br>
-        <p><span>  price: {cartitem.price}$</span></p>
+        <img src={cartitem.images[1]} className='max-w-80 max-h-80 hover:max-w-90 max-h-90'/>
+        <p className='text-2xl'><span>  {cartitem.title}</span></p><br></br>
+        <p className='text-2xl'><span>  price: {cartitem.price}$</span></p>
 
 
 

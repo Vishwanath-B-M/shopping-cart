@@ -10,8 +10,9 @@ export default function Header(){
         <div className="ml-5">
 
         <h1 className="text-red-900 font-bold  text-xl sm:text-2xl lg:text-5xl hover:text-7xl"> 
-        react redux shopping cart
+        shopping website
         </h1>
+        <p className="text-bold">using react redux</p>
         </div>
         </Link>
 
