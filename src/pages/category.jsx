@@ -1,8 +1,11 @@
 import { useState,useEffect } from "react"
 import CategoryTile from "../component/categoryTile/categorytile";
+
 export default function Category(){
     const [Category,setcategory]=useState([])
     const [loading,setloading]=useState(true)
+
+   
     
 
 
@@ -23,7 +26,7 @@ export default function Category(){
 
     return(<>
     <div className="min-h-4/4 ">
-        <div className="">
+        <div className="bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col items-center justify-center border-2 border-white shadow-2xl overflow-hidden overflow-scroll">
             {
                 Category.map((item)=><CategoryTile key={item.id} Category={item}/>)
             }   

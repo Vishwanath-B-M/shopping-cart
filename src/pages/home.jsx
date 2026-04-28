@@ -10,6 +10,7 @@ export default function Home(){
     setloading(true)
     const res=await fetch('https://dummyjson.com/products')
     const data= await res.json()
+    console.log(data)
     if(data){
         setloading(false)
         setproduct(data.products)
@@ -38,7 +39,7 @@ const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.t
             </div>
 
 
-            <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 max-w-6*l mx-auto p-3">
+            <div className="min-h-[100vh] grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 max-w-6*l mx-auto p-3">
            {searchs?
             (searchs.map((item)=><ProductTile key={item.id} product={item}/>))
           

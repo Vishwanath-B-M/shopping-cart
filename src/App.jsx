@@ -5,8 +5,8 @@ import Cart from './pages/cart'
 import Header from './component/header'
 import Login from './pages/login'
 import Category from './pages/category'
-import SingleCategory from './pages/singlecategory'
 import './App.css'
+import CategoryCard from './pages/singlecategory'
 
 function App() {
   
@@ -22,7 +22,7 @@ function App() {
       <Route  path='/category' element={<Category/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/singlecategory' element={<SingleCategory/>}/>
+      <Route path='/singlecategory/:slug' element={<CategoryCard/>}/>
     </Routes>
 
 

@@ -1,13 +1,14 @@
-
-import {Link} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 export default function CategoryTile({Category}){
-   
-    return(<>
-             
-        <Link to={`https://dummyjson.com/products/category/${category.name}`} ><p>
+    const navigate=useNavigate()
+     return(<><div>
+        <button onClick={()=>navigate(`/singlecategory/${Category.slug}`)}>
+        {console.log("Sending:", Category)}
+            <p className="text-4xl gap-3 p-3  hover:text-5xl hover:underline">
             {Category.name}
         </p>
-        </Link>
-        
+        </button>
+        </div>
+      
         </>)
 }
