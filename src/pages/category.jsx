@@ -17,7 +17,7 @@ export default function Category(){
     },[])
     return(<>
     <div className="min-h-4/4 ">
-        <div className="bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col items-center justify-center border-2 border-white shadow-2xl overflow-hidden overflow-scroll">
+        <div className="bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col items-center justify-center border-2 border-white shadow-2xl overflow-hidden overflow-scroll md:border-1">
             {
                 Category.map((item)=><CategoryTile key={item.id} Category={item}/>)
             }   

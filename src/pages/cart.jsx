@@ -13,14 +13,15 @@ export default function Cart(){
     <div  className='flex flex-col items-center justify-center' >
         {cart&&cart.length?(<div className='flex flex-col items-center justify-center mt-4'>
             {cart.map((cartitem=><CartTile key={cartitem.id} cartitem={cartitem} />))}
-            <h1 className='text-4xl'> your cart summary</h1>
+            <h1 className='md:text-2xl lg:text-4xl'> your cart summary</h1>
             <p >  
-              <span className='text-4xl'> total item: <span> {cart.length}</span> </span><br></br>
-              <span className='text-4xl'>total price:{totalcart.toFixed(2)}$</span>
+              <span className='md:text-2xl lg:text-4xl'> total item: <span> {cart.length}</span> </span><br></br>
+              <span className='md:text-2xl lg:text-4xl'>total price:{totalcart.toFixed(2)}$</span>
             </p>
         </div>):(<div className='min-h-screen flex flex-col items-center justify-center'><h1 className='text-4xl'> cart is empty </h1>
         <Link  to='/'>
-        <button className="w-72 h-25 gap-4 text-black text-4xl bg-white/40  border-4 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-5xl"> shop now  </button>
+        <button className="mb:w-35 h-10 gap-2 text-black text-2xl bg-white/40  border-1 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-3xl 
+        lg:w-72 h-25 gap-4 text-black text-4xl bg-white/40  border-4 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-5xl"> shop now  </button>
         </Link>
        </div>)
        }
