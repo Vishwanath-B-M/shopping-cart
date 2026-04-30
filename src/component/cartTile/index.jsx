@@ -8,7 +8,7 @@ function RemoveHandle(){
     dispatch(removeFromcart(cartitem.id))
 }
     return(<>
-    <div>  <div className='min-h-[50vh] flex flex-col items-center justify-center'>
+    <div>  <div className='min-h-[40vh] flex flex-col items-center justify-center object-cover '>
         <img src={cartitem.images[0]} className='max-w-80 max-h-80 hover:max-w-90 max-h-90'/>
         <p className='text-2xl'><span>  {cartitem.title}</span></p><br></br>
         <p className='text-2xl'><span>  price: {cartitem.price}$</span></p>
@@ -16,7 +16,9 @@ function RemoveHandle(){
 
 
         <div>
-        <button  onClick={ RemoveHandle } className="w-72 h-25 gap-4 text-black text-4xl bg-white/40  border-4 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-5xl m-4">
+        <button  onClick={ RemoveHandle } className="lg:w-72 h-25 gap-4 text-black text-4xl bg-white/40  border-4 border-white/40 rounded-2xl shadow-lg  hover:backdrop-blur-2xl hover:text-5xl m-4 
+        sm:w-35 h-10 gap-2 text-black text-2xl bg-white/40  border-2 border-white/40 shadow-lg  hover:backdrop-blur-2xl hover:text-3xl m-4">
+
               "remove from the cart" 
           </button>
         </div>

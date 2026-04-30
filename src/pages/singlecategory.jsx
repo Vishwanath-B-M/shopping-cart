@@ -27,8 +27,8 @@ useEffect(()=>{
 
     return(<><div className=" min-h-screen min-w-screen bg-gradient-t-r from-blue-300 to-purple-300">
      
-        <div className="lg:min-h-screen grid grid-cols-4 bg-gradient-to-r from-blue-300 to-purple-300 border-white border-3 border-rounded shadow-3xl gap-2 mx-auto max-w-6*l p-5 space-x-5 space-y-5 
-        md:grid grid-cols-3 border-2 max-w-6*l">
+        <div className="lg:min-h-screen grid grid-cols-4 bg-gradient-to-r from-blue-300 to-purple-300 border-white border-3 rounded shadow-3xl gap-2 mx-auto max-w-6*l p-5 space-x-5 space-y-5 
+        sm:grid grid-cols-3 border-2 max-w-3*l">
         {console.log(product)}
             {product.length > 0 && product?.map(item=> <SingleCate key={item.id} product={item}/>)}
         </div>
