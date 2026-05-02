@@ -32,7 +32,7 @@ const cart =useSelector(state=>state.cart.cart)
   className='object-cover h-1/2 w-full'
 />
 
-<h1 className='w-40 truncate text-gray-700 font-bold pb-6 text-2xl text-center'>{product.title}</h1>
+<h1 className='w-40 truncate text-gray-700 font-bold  text-2xl text-center'>{product.title}</h1>
 
 <h4 className='text-gray-700 text-lg'>{product.availabilityStatus}</h4>
 
