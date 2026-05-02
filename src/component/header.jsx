@@ -1,6 +1,13 @@
-import {Link} from "react-router-dom"
+import {Link, Navigate } from "react-router-dom"
 
 export default function Header(){
+
+  const token=localStorage.getItem("token")
+   function HandleLogout(){
+    localStorage.removeItem("token");
+    window.location.reload();
+     <Navigate to="/login" />
+   }
     return(<>
         <div>
         <nav className="flex items-center justify-between h-20 w-full mx-auto bg-gradient-to-r from-blue-300 to-purple-300">
@@ -27,9 +34,7 @@ export default function Header(){
             <Link to={"/cart"}>
             <li key={3} className="hover:text-5xl"> Cart </li>
             </Link>
-            <Link to={'/login'}>
-            <li key={4} className="hover:text-5xl">Login </li>
-            </Link>
+            <li key={4} className="hover:text-5xl">{token ? <button onClick={HandleLogout}>Logout</button> : <Link to="/login">Login</Link>} </li>
         </ul>
         </nav>
         </div>

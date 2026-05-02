@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import {useSelector} from 'react-redux'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CartTile  from "../component/cartTile";
+import ProtectedRoute from "../component/protectionTile/protection"
 export default function Cart(){ 
     const [totalcart,settotalcart]=useState(0)
     const cart=useSelector(state=>state.cart)
@@ -9,10 +10,11 @@ export default function Cart(){
         settotalcart(cart.reduce((accumulater,current) => accumulater+current.price,0))
     },[cart])
     console.log(cart)
+
     return(< div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-300">
     <div  className='flex flex-col items-center justify-center ' >
         {cart&&cart.length?(<div className='min-h-screen flex flex-col items-center justify-center'>
-            {cart.map((cartitem=><CartTile key={cartitem.id} cartitem={cartitem} />))}
+            {cart.map((cartitem=>(<CartTile key={cartitem.id} cartitem={cartitem} />)))}
             <h1 className='sm:text-2xl lg:text-4xl'> your cart summary</h1>
             <p >  
               <span className='sm:text-2xl lg:text-4xl'> total item: <span> {cart.length}</span> </span><br></br>
