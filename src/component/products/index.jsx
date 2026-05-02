@@ -41,7 +41,7 @@ const cart =useSelector(state=>state.cart.cart)
 <div className=' w-full flex justify-center'>
   <button 
     onClick={() => isitem ? RemoveHandle() : HandleAddtoCart()}
-    className="w-72 h-25 text-4xl bg-white/40 border-white rounded-3xl shadow hover:scale-105 transition mb-2 p-1 lg:w-72 h-25 gap-1 text-black text-4xl bg-white/40 mb-2 border-4 border-white/40 rounded-3xl shadow-lg  hover:backdrop-blur-2xl hover:text-5xl object-cover">
+    className="w-72 h-25 text-4xl bg-white/40 border-white rounded-3xl shadow hover:scale-105 transition mb-2 p-1 lg:w-1/2 h-10 gap-1 text-black text-4xl bg-white/40 mb-2 border-4 border-white/40 rounded-3xl shadow-lg  hover:backdrop-blur-2xl hover:text-5xl object-cover">
         {isitem?"remove from cart":"add to cart"}
    </button>
 </div>
