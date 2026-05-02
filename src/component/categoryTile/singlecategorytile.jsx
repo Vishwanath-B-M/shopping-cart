@@ -3,7 +3,7 @@ import { addTocart,removeFromcart} from "../../store/slice/cartslice"
 export default function SingleCate({product}){
   if(!product) return null
   const dispatch=useDispatch()
-  const cart=useSelector(state=>state.cart)
+  const cart=useSelector(state=>state.cart.cart)
   function HandleAddtoCart(){
     dispatch(addTocart(product))
   }
