@@ -40,7 +40,7 @@ const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.t
             </div>
 
 
-            <div className="min-h-screen grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 grid-rows-2  max-w-6*l mx-auto p-3">
+            <div className="h-[80%] grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 max-w-6*l mx-auto p-3">
            {searchs?
             (searchs.map((item)=><ProductTile key={item.id} product={item}/>))
           
