@@ -21,8 +21,8 @@ const cart =useSelector(state=>state.cart.cart)
    const isitem= cart.some(item=>item.id===product.id)
 
 
-    return(<>
-    <div className='flex flex-col items-center border-2 border-red-900 mt-4 gap-4 rounded-xl border-2 border-white shadow-3xl hover:scale-105 transition-transform duration-500'>
+    return(<div>
+    <div className='flex flex-col items-center border-2 border-red-900 mt-4 gap-4 rounded-xl border-2 border-white shadow-3xl hover:scale-105 transition-transform duration-500 '>
         <img src={product.images[0]||product.images[0]} alt={product.title} className='object-cover h-full w-full text-2xl '/>
         <h1 className='w-40 truncate text-grey-700 font-bold p-3 mb-2 text-3xl'> {product.title}</h1>
         <h4 className=' text-grey-700 font-bold p-2 text-2xl'> {product.availabilityStatus}</h4>
@@ -35,5 +35,5 @@ const cart =useSelector(state=>state.cart.cart)
           </button>
         </div>
     </div>
-      </>)
+      </div>)
  }
