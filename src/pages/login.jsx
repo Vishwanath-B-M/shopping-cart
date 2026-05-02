@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux"
+import { loginSuceess } from "../store/autoslice/auto"
+
 
 
 export default function Login(){
@@ -7,6 +10,7 @@ export default function Login(){
     const [username,setusername]=useState("")
     const [password,setpassword]=useState("")
     const [message,setmessage]=useState("")
+    const dispatch=useDispatch()
     const navigate=useNavigate()
         async function FetchLogin(params) {
             const res=await fetch("https://dummyjson.com/auth/login",{
@@ -20,13 +24,18 @@ export default function Login(){
     }),
 });
             const data=await res.json()
-            console.log(data)
+            
             
         
         if(res.ok){
+            console.log(data)
+            const token=data.accessToken
+
             setmessage("login successfully")
-            localStorage.setItem("token",data.accessToken)
-            console.log(data.accessToken)
+            localStorage.setItem("token",token)
+            dispatch(loginSuceess(token))
+
+            setmessage("suceesufully login")
             setusername("")
             setpassword("")
             navigate("/")

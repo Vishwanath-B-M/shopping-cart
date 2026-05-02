@@ -19,10 +19,10 @@ function App() {
     <Header/>
 
     <Routes>
-      <Route exact path='/' element={<ProtectedRoute> <Home/> </ProtectedRoute>}/>
-      <Route  path='/category' element={<ProtectedRoute> <Category/> </ProtectedRoute>}/>
+      <Route exact path='/' element={<Home/> }/>
+      <Route  path='/category' element={<Category/>}/>
       <Route path='/cart' element={<ProtectedRoute> <Cart/> </ProtectedRoute>}/>
-      <Route path='/login' element={ <Login/> }/>
+      <Route path='/login' element={<Login/>}/>
       <Route path='/singlecategory/:slug' element={<CategoryCard/>}/>
     </Routes>
 

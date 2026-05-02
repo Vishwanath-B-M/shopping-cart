@@ -5,7 +5,7 @@ import CartTile  from "../component/cartTile";
 import ProtectedRoute from "../component/protectionTile/protection"
 export default function Cart(){ 
     const [totalcart,settotalcart]=useState(0)
-    const cart=useSelector(state=>state.cart)
+    const cart=useSelector(state=>state.cart.cart)
     useEffect(()=>{
         settotalcart(cart.reduce((accumulater,current) => accumulater+current.price,0))
     },[cart])

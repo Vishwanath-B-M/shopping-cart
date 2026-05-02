@@ -6,8 +6,7 @@ import { addTocart ,removeFromcart} from '../../store/slice/cartslice'
 export default function ProductTile({product}){
 
 const dispatch=useDispatch()
-const cart=useSelector(state=>state.cart)
-
+const cart =useSelector(state=>state.cart.cart)
 
 
      function HandleAddtoCart(){

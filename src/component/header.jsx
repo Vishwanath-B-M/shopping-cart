@@ -1,13 +1,23 @@
+
 import {Link, Navigate } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { logout } from "../store/autoslice/auto"
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Header(){
+    const dispatch=useDispatch()
+    const Navigate=useNavigate()
+    const token =useSelector((state)=>state.auto.token)
 
-  const token=localStorage.getItem("token")
    function HandleLogout(){
+    dispatch(logout());
     localStorage.removeItem("token");
-    window.location.reload();
-     <Navigate to="/login" />
+    localStorage.removeItem(`cart_${token}`)
+     Navigate('/login')
+
    }
+   
     return(<>
         <div>
         <nav className="flex items-center justify-between h-20 w-full mx-auto bg-gradient-to-r from-blue-300 to-purple-300">
@@ -34,7 +44,7 @@ export default function Header(){
             <Link to={"/cart"}>
             <li key={3} className="hover:text-5xl"> Cart </li>
             </Link>
-            <li key={4} className="hover:text-5xl">{token ? <button onClick={HandleLogout}>Logout</button> : <Link to="/login">Login</Link>} </li>
+            <li key={4} className="hover:text-5xl">{token ? <button onClick={HandleLogout}>Logout</button> : <Link to={"/login"}> login </Link>} </li>
         </ul>
         </nav>
         </div>
