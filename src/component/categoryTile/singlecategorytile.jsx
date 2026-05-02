@@ -16,13 +16,13 @@ export default function SingleCate({product}){
     sm:max-h-100 flex flex-col items-center border-1 border-red-900 mt-2 gap-2 rounded border-2 border-white shadow-3xl hover:scale-105 transition-transform duration-500 ">
       <img src={product.thumbnail} alt={product.title} 
       className="object-cover h-1/2 w-full text-2xl"/>
-      <h3 className="w-40 truncate text-grey-700 font-bold pb-5 text-3xl">
+      <h3 className="w-40 truncate text-grey-700 font-bold pb-6 text-lg">
         {product.title}
         </h3>
-      <p className="text-grey-700 font-bold  text-3xl ">
+      <p className="text-grey-700 font-bold  text-lg ">
         {product.availabilityStatus}
         </p>
-      <p className="text-grey-700 font-bold text-3xl ">
+      <p className="text-grey-700 font-bold text-lg ">
         ${product.price}
         </p>
       <button onClick={()=>isitem?RemoveFromCart():HandleAddtoCart()} 
