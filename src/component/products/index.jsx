@@ -22,12 +22,12 @@ const cart =useSelector(state=>state.cart.cart)
 
 
     return(<div>
-      <div className='flex flex-col h-[700px] items-center justify-center border-2 border-white mt-2 gap-1 rounded-xl shadow-xl hover:scale-105 transition-transform duration-500 overflow-hidden'>
+      <div className='flex flex-col h-[400px] items-center justify-center border-2 border-white mt-2 gap-1 rounded-xl shadow-xl hover:scale-105 transition-transform duration-500 overflow-hidden'>
 
 <img 
   src={product.images[0]} 
   alt={product.title} 
-  className='object-cover h-[400px] w-full'
+  className='object-cover h-[200px] w-full'
 />
 
 <h1 className='w-40 truncate text-gray-700 font-bold p-4 text-2xl text-center'>{product.title}</h1>
