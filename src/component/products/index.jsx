@@ -27,25 +27,19 @@ const cart =useSelector(state=>state.cart.cart)
 <img 
   src={product.images[0]} 
   alt={product.title} 
-  className='object-cover h-1/2 w-full'
+  className='object-cover h-3/4 w-full'
 />
 
-<h1 className='w-full truncate text-gray-700 font-bold text-lg text-center'>
-  {product.title}
-</h1>
+<h1 className='w-full truncate text-gray-700 font-bold text-lg text-center'>{product.title}</h1>
 
-<h4 className='text-gray-700 text-sm'>
-  {product.availabilityStatus}
-</h4>
+<h4 className='text-gray-700 text-sm'>{product.availabilityStatus}</h4>
 
-<h4 className='text-gray-700 text-sm'>
-  ${product.price}
-</h4>
+<h4 className='text-gray-700 text-sm'>${product.price}</h4>
 
-<div className='mt-auto w-full flex justify-center'>
+<div className=' w-full flex justify-center'>
   <button 
     onClick={() => isitem ? RemoveHandle() : HandleAddtoCart()}
-    className="w-[90%] h-10 text-sm bg-white/40 border rounded-lg shadow hover:scale-105 transition"
+    className="w-72 h-25 text-4xl bg-white/40 border-white rounded-3xl shadow hover:scale-105 transition mb-2"
   >
     {isitem ? "Remove" : "Add to cart"}
   </button>
