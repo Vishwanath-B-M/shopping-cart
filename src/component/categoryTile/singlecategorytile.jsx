@@ -12,24 +12,37 @@ export default function SingleCate({product}){
   }
   const isitem=cart.some((item)=>item.id===product.id)
     return(<>
-    <div className="lg:max-h-[400px] overflow-hidden flex flex-col items-center justify-center border-2 border-red-900 mt-2 gap-2 rounded-2xl border-2 border-black shadow-3xl hover:scale-105 transition-transform duration-500 
-    sm:max-h-100 flex flex-col items-center border-1 border-red-900 mt-2 gap-2 rounded border-2 border-white shadow-3xl hover:scale-105 transition-transform duration-500 ">
-      <img src={product.thumbnail} alt={product.title} 
-      className="object-cover h-1/2 w-full text-2xl"/>
-      <h3 className="w-40 truncate text-grey-700 font-bold pb-6 text-lg">
-        {product.title}
-        </h3>
-      <p className="text-grey-700 font-bold  text-lg ">
-        {product.availabilityStatus}
-        </p>
-      <p className="text-grey-700 font-bold text-lg ">
-        ${product.price}
-        </p>
-      <button onClick={()=>isitem?RemoveFromCart():HandleAddtoCart()} 
-      className="lg:w-72 h-25 gap-1 text-black text-4xl bg-white/40 mb-2 border-4 border-white/40 rounded-3xl shadow-lg  hover:backdrop-blur-2xl hover:text-5xl object-cover">
-        {isitem?"remove from cart":"add to cart"}
-        </button>
-    </div>
+    <div className="flex flex-col max-h-[400px] overflow-hidden items-center 
+border-2 border-black mt-2 gap-2 rounded-2xl shadow-xl 
+hover:scale-105 transition-transform duration-500">
+
+  <img 
+    src={product.thumbnail} 
+    alt={product.title}
+    className="object-cover h-48 w-full"
+  />
+
+  <h3 className="w-40 truncate text-gray-700 font-bold text-lg text-center">
+    {product.title}
+  </h3>
+
+  <p className="text-gray-600 text-sm">
+    {product.availabilityStatus}
+  </p>
+
+  <p className="text-gray-800 font-semibold text-lg">
+    ${product.price}
+  </p>
+
+  <button 
+    onClick={() => isitem ? RemoveFromCart() : HandleAddtoCart()} 
+    className="w-full lg:w-2/3 h-10 text-sm bg-white border rounded-xl shadow 
+    hover:scale-105 transition mb-2"
+  >
+    {isitem ? "Remove from cart" : "Add to cart"}
+  </button>
+
+</div>
     
     
     </>)
