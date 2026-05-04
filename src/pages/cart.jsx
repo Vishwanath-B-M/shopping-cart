@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom'
 import CartTile  from "../component/cartTile";
-import ProtectedRoute from "../component/protectionTile/protection"
 export default function Cart(){ 
     const [totalcart,settotalcart]=useState(0)
     const cart=useSelector(state=>state.cart.cart)
@@ -22,7 +21,7 @@ export default function Cart(){
             </p>
         </div>):(<div className='min-h-screen flex flex-col items-center justify-center'><h1 className='text-4xl'> cart is empty </h1>
         <Link  to='/'>
-        <button className="sm:w-35 h-10 gap-2 text-black text-2xl bg-white/40  border-1 border-white/40 borderxl shadow-lg  hover:backdrop-blur-2xl hover:text-3xl 
+        <button className="sm:w-35 h-10 gap-2 text-black text-2xl bg-white/40  border-1 border-black/40 borderxl shadow-lg  hover:backdrop-blur-2xl hover:text-3xl 
         lg:w-72 h-25 gap-3 text-black text-4xl bg-white/40  border-4 border-white/40 rounded-2xl shadow-lg  hover:backdrop-blur-2xl hover:text-5xl"> shop now  </button>
         </Link>
        </div>)
