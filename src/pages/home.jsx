@@ -24,7 +24,7 @@ useEffect(()=>{
 const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.toLowerCase()))
 
 
-    return(<>
+    return(<div>
     <div className=" min-h-full bg-gradient-to-r from-blue-300 to-purple-300">{
         loading ? <div className="min-h-screen w-full flex justify-center items-center">
             <Circles
@@ -40,19 +40,20 @@ const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.t
             </div>
 
 
-            <div className="h-[80%] grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-x-5 space-y-5 lg:grid-cols-4 max-w-6*l mx-auto p-3">
-           {searchs?
-            (searchs.map((item)=><ProductTile key={item.id} product={item}/>))
+            <div className="min-h-screen  grid sm:grid-cols-2 md:grid-cols-3 gap-2 lg:grid-cols-4 gap-2 max-w-auto p-4 gap-2">
+           {search.length>0?
+           (searchs.length>0 ?
+            (searchs.map((item)=><ProductTile key={item.id} product={item}/>)):<p className="h-screen w-screen flex flex-cols items-center justify-center text-5xl font-bold">search is not found</p>)
           
-            :
-            (product&&product.length? 
-            product.map((productitem)=> <ProductTile key={productitem.id} product={productitem}/>):null)    
+            
+            :(product&&product.length?
+            product.map((productitem)=> <ProductTile key={productitem.id} product={productitem}/>):null)  
             }
             
             </div>
 
             </div>}
     </div>
-    </>)
+    </div>)
 }
 

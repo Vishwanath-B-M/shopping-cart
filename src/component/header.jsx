@@ -18,7 +18,7 @@ export default function Header(){
 
    }
    
-    return(<>
+    return(<div className=" w-full bg-gradient-to-r from-blue-300 to-purple-300">
         <div>
         <nav className="flex items-center justify-between h-20 w-full mx-auto bg-gradient-to-r from-blue-300 to-purple-300">
         <Link to={"/"}>
@@ -48,6 +48,6 @@ export default function Header(){
         </ul>
         </nav>
         </div>
-        </>
+        </div>
     )
 }

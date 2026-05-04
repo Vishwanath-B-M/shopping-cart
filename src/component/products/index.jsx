@@ -22,7 +22,7 @@ const cart =useSelector(state=>state.cart.cart)
 
 
     return(<div>
-      <div className="flex flex-col max-h-[400px] items-center justify-between 
+      <div className="flex flex-col max-h-[400px] w-full items-center justify-between 
 border-2 border-black mt-2 gap-2 rounded-2xl shadow-xl 
 hover:scale-105 transition-transform duration-500 overflow-hidden">
 
