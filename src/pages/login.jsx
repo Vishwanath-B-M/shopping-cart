@@ -61,7 +61,7 @@ export default function Login(){
         </div>
         <div>{login?<div className="flex flex-col items-center p-4 object-cover">
                 <input type="text" value={username} onChange={e=>setusername(e.target.value)&&setusername("")} placeholder="username" className="w-48 h-8 lg:w-96 lg:h-16  border-2 gap-2 p-2 text-3xl border-1 gap-2 p-1 text-2xl rounded-2xl"/>
-                <input type="text" value={password} onChange={e=>setpassword(e.target.value)} placeholder="password"className="w-48 h-8 w-96 h-16 border-2 gap-4 p-4 mt-4 text-3xl border rounded-2xl gap-2 text-2xl"/>
+                <input type="text" value={password} onChange={e=>setpassword(e.target.value)} placeholder="password"className="w-48 h-8 lg:w-96 h-16 border-2 gap-4 p-4 mt-4 text-3xl border rounded-2xl gap-2 text-2xl"/>
                 <Link to="https://youtu.be/T330K2Ck9DU?list=RDT330K2Ck9DUrel=preload" className="lg:text-3xl lg:m-4 lg:hover:text-4xl text-md m-2 hover:text-3xl ">
                           forget password?
                 </Link> 
