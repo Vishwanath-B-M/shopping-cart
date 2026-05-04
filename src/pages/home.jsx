@@ -35,15 +35,15 @@ const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.t
             />
         </div> : <div>
             <div>
-                <input type="text" placeholder="search" className="lg:w-2/4 h-10 border-2 ml-4 text-3xl mr-20 rounded-xl hover:text-4xl hover:w-3/4 
-                sm:w-2/4 h-5 border-1 ml-2 text-2xl mr-20 rounded hover:text-3xl hover:w-3/4" value={search} onChange={(e)=>setsearch(e.target.value)}/>
+                <input type="text" placeholder="search" className="lg:w-2/4 lg:h-10 lg:border-2 lg:ml-4 lg:text-3xl lg:mr-20 lg:rounded-xl hover:text-4xl hover:w-3/4 
+                w-2/4 h-5 border ml-2 stext-2xl rounded " value={search} onChange={(e)=>setsearch(e.target.value)}/>
             </div>
 
 
-            <div className="min-h-screen  grid sm:grid-cols-2 md:grid-cols-3 gap-2 lg:grid-cols-4 gap-2 max-w-auto p-4 gap-2">
+            <div className="min-h-screen  grid grid-cols-2 md:grid-cols-3 gap-2 lg:grid-cols-4 gap-2 max-w-auto p-4 gap-2">
            {search.length>0?
            (searchs.length>0 ?
-            (searchs.map((item)=><ProductTile key={item.id} product={item}/>)):<p className="h-screen w-screen flex flex-cols items-center justify-center text-5xl font-bold">search is not found</p>)
+            (searchs.map((item)=><ProductTile key={item.id} product={item}/>)):<p className="h-screen w-screen flex flex-cols items-center justify-center lg:text-5xl text-3xl font-bold">search is not found</p>)
           
             
             :(product&&product.length?
