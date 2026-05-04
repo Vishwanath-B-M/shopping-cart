@@ -26,14 +26,14 @@ export default function Header(){
 
         <div className="ml-2 lg:ml-4">
 
-        <h1 className="text-red-900 font-bold  textxl lg:text-5xl hover:text-7xl"> 
+        <h1 className="text-red-900 font-bold  textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
         shopping website
         </h1>
         <p className="text-bold">using react redux</p>
         </div>
         </Link>
 
-        <ul className=" text-2xl lg:text-4xl text-black flex flex-cols items-end gap-2 lg:gap-4 mr-4 lg:mr-10"> 
+        <ul className=" textxl lg:text-4xl text-black flex flex-cols items-end gap-2 lg:gap-4 mr-auto lg:mr-10"> 
            
         <Link to={"/"}>
             <li key={1} className=" hover:text-2xl lg:hover:text-5xl"> Home </li>
