@@ -33,7 +33,7 @@ export default function Header(){
         </div>
         </Link>
 
-        <ul className=" textxl lg:text-4xl text-black flex flex-cols items-end gap-2 lg:gap-4 mr-auto lg:mr-10"> 
+        <ul className=" textxl lg:text-4xl text-black flex flex-cols items-end gap-2 lg:gap-4 lg:mr-10"> 
            
         <Link to={"/"}>
             <li key={1} className=" hover:text-2xl lg:hover:text-5xl"> Home </li>
