@@ -26,7 +26,7 @@ export default function Header(){
 
         <div className="m-2 lg:ml-4">
 
-        <h1 className="text-red-900 font-bold  textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
+        <h1 className="text-red-900 font-bold text-center textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
         shopping website
         </h1>
         <p className="text-bold">using react redux</p>
