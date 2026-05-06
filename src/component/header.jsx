@@ -24,10 +24,12 @@ export default function Header(){
         <Link to={"/"}>
 
 
-        <div className="m-2 lg:ml-4 w-full bg-gradient-to-r from-blue-300 to-purple-300 ">
+        <div className="m-2 lg:ml-4">
+            <div className="w-full bg-gradient-to-r from-blue-300 to-purple-300">
         <h1 className="text-red-900 font-bold textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
         shopping website
         </h1>
+        </div>
         <p className="text-bold">using react redux</p>
         </div>
         </Link>
