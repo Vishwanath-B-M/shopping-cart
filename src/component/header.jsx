@@ -20,16 +20,15 @@ export default function Header(){
    
     return(<div className="w-full bg-gradient-to-r from-blue-300 to-purple-300">
         <div>
-        <nav className="flex items-center mt-2 justify-between h-8 lg:h-24 w-full mx-auto bg-gradient-to-r from-blue-300 to-purple-300">
+        <nav className="flex items-center gap-2 justify-between h-8 lg:h-24 w-full mx-auto bg-gradient-to-r from-blue-300 to-purple-300">
         <Link to={"/"}>
 
 
-        <div className="m-2 lg:ml-4">
-            <div className="w-full bg-gradient-to-r from-blue-300 to-purple-300">
-        <h1 className="text-red-900 font-bold textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
+        <div className="gap-2 lg:gap-4">
+        
+        <h1 className="w-full text-red-900 font-bold textxl lg:text-5xl lg:hover:text-7xl"> 
         shopping website
         </h1>
-        </div>
         <p className="text-bold">using react redux</p>
         </div>
         </Link>
