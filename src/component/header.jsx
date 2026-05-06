@@ -24,7 +24,7 @@ export default function Header(){
         <Link to={"/"}>
 
 
-        <div className="ml-2 lg:ml-4">
+        <div className="m-2 lg:ml-4">
 
         <h1 className="text-red-900 font-bold  textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
         shopping website
