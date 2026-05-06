@@ -35,8 +35,8 @@ const searchs= product.filter((item)=>item.title.toLowerCase().includes(search.t
             />
         </div> : <div>
             <div>
-                <input type="text" placeholder="search" className="lg:w-2/4 lg:h-10 lg:border-2 lg:ml-4 lg:text-3xl lg:mr-20 lg:rounded-xl hover:text-4xl hover:w-3/4 
-                w-2/4 h-5 border ml-2 stext-2xl rounded " value={search} onChange={(e)=>setsearch(e.target.value)}/>
+                <input type="text" placeholder="search" className="lg:w-2/4 lg:h-10 lg:border-2 lg:ml-4 lg:text-3xl lg:mr-20 lg:rounded-xl lg:hover:text-4xl hover:w-3/4 
+                w-2/4 h-5 border m-2 text-2xl rounded " value={search} onChange={(e)=>setsearch(e.target.value)}/>
             </div>
 
 
