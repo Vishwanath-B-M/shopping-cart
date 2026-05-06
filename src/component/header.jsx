@@ -1,5 +1,5 @@
 
-import {Link, Navigate } from "react-router-dom"
+import {Link} from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { logout } from "../store/autoslice/auto"
 import { useSelector } from "react-redux";
@@ -24,7 +24,7 @@ export default function Header(){
         <Link to={"/"}>
 
 
-        <div className="gap-2 lg:gap-4">
+        <div className="mt-2">
         
         <h1 className="w-full text-red-900 font-bold textxl lg:text-5xl lg:hover:text-7xl"> 
         shopping website
