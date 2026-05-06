@@ -18,7 +18,7 @@ export default function Header(){
 
    }
    
-    return(<div className=" h-screen w-full bg-gradient-to-r from-blue-300 to-purple-300">
+    return(<div className="w-full bg-gradient-to-r from-blue-300 to-purple-300">
         <div>
         <nav className="flex items-center mt-2 justify-between h-8 lg:h-24 w-full mx-auto bg-gradient-to-r from-blue-300 to-purple-300">
         <Link to={"/"}>
@@ -26,7 +26,7 @@ export default function Header(){
 
         <div className="m-2 lg:ml-4">
 
-        <h1 className="text-red-900 font-bold text-center textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
+        <h1 className="text-red-900 font-bold bg-gradient-to-r from-blue-300 to-purple-300 textxl lg:text-5xl hover:text-2xl lg:hover:text-7xl"> 
         shopping website
         </h1>
         <p className="text-bold">using react redux</p>
