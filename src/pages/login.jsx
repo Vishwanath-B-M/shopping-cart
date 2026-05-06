@@ -51,15 +51,15 @@ export default function Login(){
 
     return(<>
     
-    <div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-300">
+    <div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col  items-center justify-center ">
     
-    <div className="h-full w-full flex flex-col  items-center justify-center ">
+    <div className=" w-full flex flex-col  items-center">
     <div className=" bg-white-700">
-        <div className="flex flex-row items-center justify-center object-cover gap-4 mt-4">
+        <div className=" flex flex-row items-center object-cover">
             <button className="w-32 h-8 rounded-2xl lg:w-64 lg:h-16 gap-2 lg:gap-4 text-black text-2xl lg:text-4xl bg-white/40 border-2 lg:border-4 border-white/40 rounded-3xl shadow-lg  hover:backdrop-blur-2xl hover:text-3xl lg:hover:text-5xl" onClick={()=>setlogin(true)}>login</button>
             <button className="w-32 h-8 rounded-2xl lg:w-64 lg:h-16 gap-2 lg:gap-4 text-black text-2xl lg:text-4xl bg-white/40 border-2 lg:border-4 border-white/40 rounded-3xl shadow-lg  hover:backdrop-blur-2xl hover:text-3xl lg:hover:text-5xl" onClick={()=>setlogin(false)}>signup</button>
         </div>
-        <div>{login?<div className="flex flex-col items-center p-4 object-cover">
+        <div>{login?<div className="flex flex-col items-center p-2 object-cover">
                 <input type="text" value={username} onChange={e=>setusername(e.target.value)&&setusername("")} placeholder="username" className="w-62 h-8 lg:w-96 lg:h-16  border-2 lg:gap-2 lg:p-2 lg:text-3xl border-1 gap-2  textxl rounded-2xl"/>
                 <input type="text" value={password} onChange={e=>setpassword(e.target.value)} placeholder="password"className="w-62 h-8 mt-2 lg:w-96 lg:h-16 lg:border-2 lg:gap-4 lg:p-4 lg:mt-4 lg:text-3xl border rounded-2xl gap-2 textxl"/>
                 <Link to="https://youtu.be/T330K2Ck9DU?list=RDT330K2Ck9DUrel=preload" className="lg:text-3xl lg:m-4 lg:hover:text-4xl text-md m-2 hover:text-3xl ">
