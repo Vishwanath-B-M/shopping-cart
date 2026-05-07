@@ -24,7 +24,7 @@ export default function Category(){
         color={'red'}
         visible={true}/>
         </div>:
-        <div className="bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col items-center justify-center border-2 border-black m-2 shadow-2xl overflow-hidden overflow-scroll">
+        <div className="bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col items-center justify-center m-2 shadow-2xl overflow-hidden overflow-scroll">
             {
                 Category.map((item)=><CategoryTile key={item.id} Category={item}/>)
             }   

@@ -13,13 +13,13 @@ export default function SingleCate({product}){
   const isitem=cart.some((item)=>item.id===product.id)
     return(<>
     <div className="flex flex-col max-h-[200px] lg:max-h-[400px] overflow-hidden items-center 
-border-2 border-black mt-2 gap-2 rounded-2xl shadow-xl 
+border-2 border-black lg:mt-2 lg:gap-2 rounded-2xl shadow-xl 
 hover:scale-105 transition-transform duration-500">
 
   <img 
     src={product.thumbnail} 
     alt={product.title}
-    className="object-cover h-32 lg:h-48 w-full"
+    className="object-cover lg:h-48 w-full"
   />
 
   <h3 className="w-40 truncate text-gray-700 font-bold text-lg text-center">
