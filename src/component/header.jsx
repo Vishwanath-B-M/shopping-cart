@@ -20,7 +20,7 @@ export default function Header(){
    
     return(<div className="w-full bg-gradient-to-r from-blue-300 to-purple-300">
         <div>
-        <nav className="flex items-center gap-2 justify-between h-8 lg:h-24 w-full mx-auto bg-gradient-to-r from-blue-400 to-purple-400">
+        <nav className="flex items-center gap-2 justify-between h-16 lg:h-24 w-full mx-auto bg-gradient-to-r from-blue-400 to-purple-400">
         <Link to={"/"}>
 
 
