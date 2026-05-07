@@ -85,22 +85,9 @@ npm run build
 ```
 
 ---
-
-# Screenshots
- project screenshots:-
-
-Example:
-
-```md
-![Home Page](./screenshots/home.png)
-```
-
----
-
 # Future Improvements
 
 * Add payment gateway integration
-* Add product categories and filters
 * Add quantity increment/decrement feature
 * Improve animations and UI polish
 * Add backend and database support
