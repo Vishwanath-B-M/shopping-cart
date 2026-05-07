@@ -12,7 +12,7 @@ export default function SingleCate({product}){
   }
   const isitem=cart.some((item)=>item.id===product.id)
     return(<>
-    <div className="flex flex-col max-h-[300px] lg:max-h-[400px] overflow-hidden items-center lg:mt-2 gap-2 border rounded-2xl shadow-xl 
+    <div className="flex flex-col max-h-[300px] lg:max-h-[400px] overflow-hidden items-center m-2 gap-2 border rounded-2xl shadow-xl 
 hover:scale-105 transition-transform duration-500">
 
   <img 
@@ -35,7 +35,7 @@ hover:scale-105 transition-transform duration-500">
 
   <button 
     onClick={() => isitem ? RemoveFromCart() : HandleAddtoCart()} 
-    className="w-1/4 lg:w-2/4 h-8 text-sm bg-white border rounded-xl shadow 
+    className="w-2/4 h-8 text-sm bg-white border rounded-xl shadow 
     hover:scale-105 transition mb-2"
   >
     {isitem ? "Remove from cart" : "Add to cart"}
