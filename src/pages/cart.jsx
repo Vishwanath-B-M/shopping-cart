@@ -17,7 +17,7 @@ export default function Cart(){
             <h1 className='text-2xl lg:text-4xl'> your cart summary</h1>
             <p >  
               <span className='text-2xl lg:text-4xl'> total item: <span> {cart.length}</span> </span><br></br>
-              <span className='text-2xl lg:text-4xl'>total price:{totalcart.toFixed(2)}$</span>
+              <span className='text-2xl lg:text-4xl mb-2'>total price:{totalcart.toFixed(2)}$</span>
             </p>
         </div>):(<div className='min-h-screen flex flex-col items-center justify-center'><h1 className='text-4xl'> cart is empty </h1>
         <Link  to='/'>
