@@ -12,7 +12,7 @@ export default function SingleCate({product}){
   }
   const isitem=cart.some((item)=>item.id===product.id)
     return(<>
-    <div className="flex flex-col max-h-[350px] lg:max-h-[400px] overflow-hidden items-center m-2 gap-2 border rounded-2xl shadow-xl 
+    <div className="flex flex-col max-h-[320px] lg:max-h-[400px] overflow-hidden items-center m-2 gap-2 border rounded-2xl shadow-xl 
 hover:scale-105 transition-transform duration-500">
 
   <img 
