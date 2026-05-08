@@ -16,7 +16,7 @@ export default function Category(){
     useEffect(()=>{
         FetchData()
     },[])
-    return(<div className="bg-gradient-to-r from-blue-300 to-purple-300">
+    return(<div className="h-screen bg-gradient-to-r from-blue-300 to-purple-300">
     <div className="min-h-4/4 ">{loading?<div className="flex flex-cols items-center justify-center min-h-[80vh] w-full">
         <Circles
         height={'120'}
